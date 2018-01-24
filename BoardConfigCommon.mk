@@ -59,6 +59,9 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab
 BOARD_ROOT_EXTRA_FOLDERS := factory
 BOARD_ROOT_EXTRA_SYMLINKS := /factory:/efs
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # Sepolicy
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
