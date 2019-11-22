@@ -3,9 +3,9 @@ $(call inherit-product, vendor/samsung/exynos7885-common/exynos7885-common-vendo
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
+    android.hardware.audio@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio.effect@6.0-impl \
     libtinycompress \
     audio.r_submix.default \
     audio.usb.default
