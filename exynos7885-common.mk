@@ -165,7 +165,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     android.hardware.sensors@1.0-impl.samsung \
-    libsensorndkbridge
+    libshim_sensorndkbridge
 
 # Skip Mount
 PRODUCT_PACKAGES += \

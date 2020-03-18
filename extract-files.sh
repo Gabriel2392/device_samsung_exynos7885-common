@@ -60,11 +60,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/libsample5.so)
-            "${PATCHELF}" --replace-needed "libsample6.so" "libsample7.so" "${2}"
-            ;;
-        vendor/lib/libsample7.so)
-            "${PATCHELF}" --set-soname "libsample7.so" "${2}"
+        vendor/lib*/libsensorlistener.so)
+            "${PATCHELF}" --add-needed "libshim_sensorndkbridge.so" "${2}"
             ;;
     esac
 }
