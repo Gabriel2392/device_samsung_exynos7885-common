@@ -64,11 +64,6 @@
       <fqname>@2.0::IMapper/default</fqname>
    </hal>
    <hal format="hidl">
-      <name>android.hardware.health</name>
-      <transport>hwbinder</transport>
-      <fqname>@2.0::IHealth/default</fqname>
-   </hal>
-   <hal format="hidl">
       <name>android.hardware.light</name>
       <transport>hwbinder</transport>
       <fqname>@2.0::ILight/default</fqname>
