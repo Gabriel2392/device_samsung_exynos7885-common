@@ -76,4 +76,5 @@ ALL_DEFAULT_INSTALLED_MODULES += \
 	$(LIBOPENCL6411_SYMLINK)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
+include $(LOCAL_PATH)/AndroidBoard.mk
 endif
