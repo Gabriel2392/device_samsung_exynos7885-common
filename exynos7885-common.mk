@@ -116,10 +116,10 @@ PRODUCT_PACKAGES += \
     init.$(TARGET_SOC).rc \
     init.$(TARGET_SOC).usb.rc \
     fstab.$(TARGET_SOC) \
-    fstab.enableswap
+    fstab.enableswap \
+    ueventd.exynos7885.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \
     $(LOCAL_PATH)/rootdir/etc/fstab.exynos7885:$(TARGET_COPY_OUT_RAMDISK)/vendor/etc/fstab.$(TARGET_SOC)
 
 # Keymaster
