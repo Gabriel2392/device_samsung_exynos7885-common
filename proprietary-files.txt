@@ -37,15 +37,11 @@ vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/lib/libaudio-ril.so
-vendor/lib/libreference-ril.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
-vendor/lib/librilutils.so
 vendor/lib/libsecril-client.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
-vendor/lib64/libreference-ril.so
 vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
-vendor/lib64/librilutils.so
 vendor/lib64/libsec-ril-dsds.so
 vendor/lib64/libsec-ril.so
 vendor/lib64/libsecril-client.so
