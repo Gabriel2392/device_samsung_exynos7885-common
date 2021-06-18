@@ -70,6 +70,9 @@ function blob_fixup() {
 	    "$PATCHELF" --replace-needed libaudioroute.so libaudioroute.exynos7885.so "$2"
 	    "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos7885.so "$2"
 	    ;;
+	vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
+	    "$PATCHELF" --replace-needed libril.so libril-samsung.so "$2"
+	    ;;
     esac
 }
 
