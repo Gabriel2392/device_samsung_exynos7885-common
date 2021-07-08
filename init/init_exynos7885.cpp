@@ -38,6 +38,10 @@
 
 using android::base::GetProperty;
 
+std::vector<std::string> ro_props_default_source_order = {
+    "", "odm.", "product.", "system.", "system_ext.", "vendor.",
+};
+
 namespace {
 void property_override(char const prop[], char const value[], bool add = true) {
   prop_info *pi;
@@ -47,6 +51,20 @@ void property_override(char const prop[], char const value[], bool add = true) {
     __system_property_update(pi, value, strlen(value));
   else if (add)
     __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void set_ro_build_prop(const std::string &prop, const std::string &value,
+                       bool product = true) {
+  std::string prop_name;
+
+  for (const auto &source : ro_props_default_source_order) {
+    if (product)
+      prop_name = "ro.product." + source + prop;
+    else
+      prop_name = "ro." + source + "build." + prop;
+
+    property_override(prop_name.c_str(), value.c_str());
+  }
 }
 
 bool hasEnding(const std::string &str, char suffix) {
@@ -70,4 +88,7 @@ void vendor_load_properties() {
   if (isNFC) {
     property_override("ro.boot.product.hardware.sku", "NFC");
   }
+
+  set_ro_build_prop("model", model);
+  set_ro_build_prop("product", model, false);
 }
