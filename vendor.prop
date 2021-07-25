@@ -16,3 +16,6 @@ debug.sf.hw=1
 ## RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
+
+# Wifi direct
+wifi.direct.interface=p2p0
