@@ -74,6 +74,9 @@ bool hasEnding(const std::string &str, char suffix) {
 
 void vendor_load_properties() {
   auto model = GetProperty("ro.boot.product.model", "");
+  if (model.empty()) {
+    model = GetProperty("ro.boot.em.model", "");
+  }
   bool isNFC = false;
 
   // Korean models all have NFC
