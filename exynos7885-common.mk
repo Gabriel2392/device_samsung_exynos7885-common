@@ -70,7 +70,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 ifeq ($(call has_feature, fp),true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung \
+    android.hardware.biometrics.fingerprint@2.3-service.samsung \
     FeatureFingerprintOverlay
 endif
 
