@@ -276,7 +276,7 @@ endif
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.3-service.samsung
+    android.hardware.vibrator-service.samsung
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
