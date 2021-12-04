@@ -272,7 +272,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     vendor.samsung.hardware.radio@2.1.vendor \
     libnetutils.vendor \
-    libsqlite.vendor
+    libsqlite.vendor \
+    secril_config_svc
 
 # Samsung Ext
 PRODUCT_PACKAGES += \
