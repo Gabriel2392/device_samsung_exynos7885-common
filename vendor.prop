@@ -29,6 +29,7 @@ ro.soc.model=exynos7885
 
 ## Audio
 ro.config.vc_call_vol_steps=7
+ro.config.alarm_vol_steps=15
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
