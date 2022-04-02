@@ -269,7 +269,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 ifeq ($(call has_feature,typec),true)
-PRODUCT_PACKAGES += android.hardware.usb@1.1-service.typec
+PRODUCT_PACKAGES += android.hardware.usb@1.3-service.samsung
 else
 PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
 endif
