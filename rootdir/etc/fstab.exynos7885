@@ -8,6 +8,7 @@
 /dev/block/platform/13500000.dwmmc0/by-name/system	/system		erofs	ro	wait,first_stage_mount
 /dev/block/platform/13500000.dwmmc0/by-name/vendor	/vendor		ext4	ro	wait,first_stage_mount
 /dev/block/platform/13500000.dwmmc0/by-name/vendor	/vendor		erofs	ro	wait,first_stage_mount
+/dev/block/platform/13500000.dwmmc0/by-name/omr         /metadata       ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_checksum,data=ordered,errors=panic wait,first_stage_mount,formattable,check
 
 /dev/block/platform/13500000.dwmmc0/by-name/cache	/cache  	ext4	nosuid,nodev,noatime,barrier=1                   wait
 /dev/block/platform/13500000.dwmmc0/by-name/cache	/cache  	f2fs	nosuid,nodev,noatime,inline_xattr,flush_merge,data_flush   wait
