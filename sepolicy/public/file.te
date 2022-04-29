@@ -18,7 +18,6 @@ type sysfs_v4l_smfc, sysfs_type, r_fs_type, fs_type;
 type sysfs_devfreq, sysfs_type, r_fs_type, fs_type;
 type sysfs_v4l_fimc, sysfs_type, r_fs_type, fs_type;
 type sysfs_graphics, fs_type, sysfs_type;
-type sysfs_gpu, fs_type, sysfs_type;
 type sysfs_multipdp, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_fuelgauge, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_charger, fs_type, sysfs_type, mlstrustedobject;
