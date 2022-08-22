@@ -593,10 +593,3 @@ service abox /vendor/bin/main_abox 14a50000.abox /data/log/abox
 service watchdogd /system/bin/watchdogd 10 20
     class core
     seclabel u:r:watchdogd:s0
-
-service charger /system/bin/charger
-    class charger
-    user system
-    group system graphics input
-    capabilities SYS_BOOT
-    seclabel u:r:charger:s0
