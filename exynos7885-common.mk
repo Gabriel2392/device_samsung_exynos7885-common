@@ -56,7 +56,9 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service.samsung
+    android.hardware.camera.provider@2.5-service.samsung \
+    libGrallocWrapper \
+    libacryl
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -93,8 +95,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.2-service \
-    android.hardware.graphics.mapper@2.0-impl-2.1
+    android.hardware.graphics.mapper@2.0-impl-2.1 \
+    android.hardware.composer.hwc3-service.slsi \
+    gralloc.$(TARGET_SOC) \
+    libion_exynos
 
 # Health
 PRODUCT_PACKAGES += \
@@ -122,10 +126,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0-service.samsung \
     libkeymaster4_1support.vendor
-
-# Light
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
 
 ifeq ($(call has_feature,lt),true)
 PRODUCT_PACKAGES += \
@@ -163,6 +163,22 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+
+# OMX
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.VP9.Decoder \
+    libOMX.Exynos.WMV.Decoder
 
 # Permissions
 PRODUCT_COPY_FILES += \

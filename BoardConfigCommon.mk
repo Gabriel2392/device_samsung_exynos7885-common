@@ -6,6 +6,10 @@ BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos7885
 TARGET_BOOTLOADER_BOARD_NAME := $(TARGET_SOC)
 
+include hardware/samsung_slsi-linaro/config/BoardConfig7885.mk
+# Camera - libhwjpeg, unset it to enable guard
+TARGET_USES_UNIVERSAL_LIBHWJPEG :=
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a

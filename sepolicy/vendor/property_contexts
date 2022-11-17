@@ -38,8 +38,5 @@ vendor.powerhal.             u:object_r:vendor_powerhal_prop:s0
 # FACTORY
 ro.factory.factory_binary    u:object_r:vendor_factory_prop:s0
 
-# Hwc
-hwc.exynos.vsync_mode        u:object_r:vendor_hwc_prop:s0
-
 # Wlan
 vendor.wlan.                 u:object_r:vendor_wifi_prop:s0
