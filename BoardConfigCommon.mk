@@ -129,6 +129,9 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Vibrator
+$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
+
 # Wifi
 BOARD_WLAN_DEVICE                := slsi
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
