@@ -73,6 +73,9 @@ function blob_fixup() {
 	vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
 	    "$PATCHELF" --replace-needed libril.so libril-samsung.so "$2"
 	    ;;
+	vendor/lib*/libskeymaster4device.so)
+            "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
+            ;;
     esac
 }
 
