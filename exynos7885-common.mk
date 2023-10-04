@@ -322,7 +322,7 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.samsung
 
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi-service \
     hostapd \
     wpa_supplicant \
     WifiOverlay
