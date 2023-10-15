@@ -20,6 +20,9 @@ vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so
 # Wifi direct
 wifi.direct.interface=p2p0
 
+# Hardware
+ro.hardware.egl=mali
+
 ## SoC
 ro.soc.manufacturer=samsung
 ro.soc.model=exynos7885
