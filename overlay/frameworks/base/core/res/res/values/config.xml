@@ -71,6 +71,9 @@
         <item>"mobile_ia,14,0,2,-1,true"</item>
         <item>"mobile_emergency,15,0,2,-1,true"</item>
     </string-array>
+    
+   <!-- Is the device capable of hot swapping an UICC Card -->
+   <bool name="config_hotswapCapable">true</bool>
 
    <!-- ComponentName of a dream to show whenever the system would otherwise have
         gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
