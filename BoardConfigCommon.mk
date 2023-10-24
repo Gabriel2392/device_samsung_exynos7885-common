@@ -30,6 +30,11 @@ BOARD_HAVE_BLUETOOTH_SLSI := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Display
+ifeq ($(call has_feature,aod),false)
+BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
+endif
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_exynos7885
 
