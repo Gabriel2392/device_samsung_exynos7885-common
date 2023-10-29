@@ -30,6 +30,13 @@ BOARD_HAVE_BLUETOOTH_SLSI := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+# Camera
+ifneq ($(TARGET_DEVICE),a10)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+endif
+
 # Display
 ifeq ($(call has_feature,aod),false)
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
