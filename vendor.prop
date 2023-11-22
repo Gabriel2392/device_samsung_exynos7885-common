@@ -41,3 +41,7 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
+## Vibrator HAL
+ro.vendor.vibrator_hal.click_duration=50
+ro.vendor.vibrator_hal.tick_duration=45
+ro.vendor.vibrator_hal.texture_tick_duration=30
