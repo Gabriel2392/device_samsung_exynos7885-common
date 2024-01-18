@@ -72,6 +72,9 @@ function blob_fixup() {
 	    ;;
 	vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
 	    "$PATCHELF" --replace-needed libril.so libril-samsung.so "$2"
+	    # Pass an empty value to SecRil::RequestComplete in OnGetSmscAddressDone
+	    xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aae30314aa/600e40f9820c805224008052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
+	    mv "${2}".patched "${2}"
 	    ;;
 	vendor/lib*/libskeymaster4device.so)
             "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
