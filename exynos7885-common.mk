@@ -4,6 +4,9 @@ $(call inherit-product, vendor/samsung/exynos7885-common/exynos7885-common-vendo
 # Include debug tools
 $(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
 
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 ## FEATURES LIST
 # fp: Fingerprint feature
 # lt: Light sensor feature
