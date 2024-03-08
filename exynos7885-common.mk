@@ -292,6 +292,17 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     hardware/samsung/aidl/power-libperfmgr
 
+# Symlinks
+PRODUCT_PACKAGES += \
+    libOpenCL_symlink32 \
+    libOpenCL_symlink64 \
+    libOpenCL.1_symlink32 \
+    libOpenCL.1_symlink64 \
+    libOpenCL.1.1_symlink32 \
+    libOpenCL.1.1_symlink64 \
+    vulkan_mali_symlink32 \
+    vulkan_mali_symlink64
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
