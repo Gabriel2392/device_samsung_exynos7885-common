@@ -91,8 +91,8 @@ vendor/lib64/libgiantmscl.so
 vendor/lib64/libhwjpeg.so
 
 # EGL
-vendor/lib/egl/libGLES_mali.so
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/libOpenCL.so;SYMLINK=vendor/lib/libOpenCL.so.1;SYMLINK=vendor/lib/libOpenCL.so.1.1;SYMLINK=vendor/lib/hw/vulkan.exynos7885.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/libOpenCL.so;SYMLINK=vendor/lib64/libOpenCL.so.1;SYMLINK=vendor/lib64/libOpenCL.so.1.1;SYMLINK=vendor/lib64/hw/vulkan.exynos7885.so
 
 # Media
 vendor/etc/media_codecs.xml
