@@ -297,7 +297,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung
+    hardware/samsung \
+    bootable/deprecated-ota
 
 # Task profiles
 PRODUCT_COPY_FILES += \
