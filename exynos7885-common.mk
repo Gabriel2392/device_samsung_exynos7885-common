@@ -35,7 +35,8 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     audio.r_submix.default \
     audio.usb.default \
-    SamsungDAP
+    SamsungDAP \
+    libprocessgroup.vendor
 
 # Audio Configs
 PRODUCT_COPY_FILES += \
@@ -62,7 +63,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service.samsung \
     libGrallocWrapper \
-    libacryl
+    libacryl \
+    libexpat.vendor
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -263,7 +265,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor
+    android.hardware.radio.deprecated@1.0.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor
 
 # Samsung Ext
 PRODUCT_PACKAGES += \
