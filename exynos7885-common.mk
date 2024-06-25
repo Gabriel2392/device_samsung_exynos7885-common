@@ -25,6 +25,9 @@ endef
 # GMS Client Id
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
+# OTA
+AB_OTA_UPDATER := false
+
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true
 
