@@ -63,6 +63,13 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed "libshim_sensorndkbridge.so" "${2}"
             ;;
+	vendor/lib/libaudio_soundtrigger.so | vendor/lib/soundfx/libaudioeffectoffload.so)
+	    "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos7885.so "$2"
+	    ;;
+	vendor/lib/hw/audio.primary.exynos7884B.so | vendor/lib/hw/audio.primary.exynos7904.so)
+	    "$PATCHELF" --replace-needed libaudioroute.so libaudioroute.exynos7885.so "$2"
+	    "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos7885.so "$2"
+	    ;;
     esac
 }
 

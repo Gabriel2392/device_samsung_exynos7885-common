@@ -6,8 +6,8 @@ vendor/etc/abox_debug.xml
 vendor/etc/audio_board_info.xml
 vendor/etc/SoundBoosterParam.txt
 vendor/lib/soundfx/libaudioeffectoffload.so
-vendor/lib/vndk/libaudioroute.so
-vendor/lib/vndk/libtinyalsa.so
+vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.exynos7885.so;MODULE=libaudioroute.exynos7885
+vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.exynos7885.so;MODULE=libtinyalsa.exynos7885
 vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_SamsungRec_07001.so
