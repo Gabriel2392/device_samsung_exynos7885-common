@@ -79,6 +79,9 @@ function blob_fixup() {
 	vendor/lib*/libskeymaster4device.so)
             "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
+	vendor/lib/libwvhidl.so)
+	    "$PATCHELF" --add-needed libcrypto_shim.so "$2"
+	    ;;
     esac
 }
 
