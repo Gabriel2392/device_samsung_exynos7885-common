@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2021-2023 The LineageOS Project
+# Copyright (C) 2021-2025 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 # limitations under the License.
 #
 
+ifneq ($(filter exynos7884B exynos7904,$(TARGET_SOC)),)
 MKDTBOIMG  := $(HOST_OUT_EXECUTABLES)/mkdtboimg$(HOST_EXECUTABLE_SUFFIX)
 KERNEL_OUT := $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ
 DTB_DIR    := $(KERNEL_OUT)/arch/$(KERNEL_ARCH)/boot/dts/exynos
@@ -30,3 +31,4 @@ $(INSTALLED_DTBIMAGE_TARGET): $(PRODUCT_OUT)/kernel $(MKDTBOIMG)
 dtbimage: $(INSTALLED_DTBIMAGE_TARGET)
 
 INSTALLED_RADIOIMAGE_TARGET += $(INSTALLED_DTBIMAGE_TARGET)
+endif

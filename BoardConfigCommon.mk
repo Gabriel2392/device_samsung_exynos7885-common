@@ -66,9 +66,8 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos7885
 TARGET_KERNEL_CONFIG := $(TARGET_DEVICE)_defconfig
 TARGET_KERNEL_NO_GCC := true
 
-# DTB/DTBO
+# DTBO
 BOARD_KERNEL_SEPARATED_DTBO := true
-BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos7885.cfg
 BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 
 # Fingerprint
