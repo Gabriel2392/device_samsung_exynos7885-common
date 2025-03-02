@@ -299,7 +299,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/samsung \
     bootable/deprecated-ota \
-    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
+    hardware/samsung_slsi/libbt
 
 # Task profiles
 PRODUCT_COPY_FILES += \
