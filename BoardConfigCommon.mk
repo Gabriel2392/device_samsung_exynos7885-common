@@ -76,7 +76,7 @@ TARGET_SEC_FP_HAS_FINGERPRINT_GESTURES := true
 endif
 
 # Keymaster
-TARGET_KEYMASTER_VARIANT := samsung
+$(call soong_config_set,samsungVars,target_keymaster4_library,//vendor/samsung/exynos7885-common:libskeymaster4device)
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
