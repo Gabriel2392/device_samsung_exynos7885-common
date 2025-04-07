@@ -59,6 +59,7 @@ TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
+include hardware/samsung-ext/interfaces/sepolicy/SEPolicy.mk
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor

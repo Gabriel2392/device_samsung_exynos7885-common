@@ -1,6 +1,9 @@
 # Call proprietary blob setup
 $(call inherit-product, vendor/samsung/exynos7885-common/exynos7885-common-vendor.mk)
 
+# Include debug tools
+$(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
