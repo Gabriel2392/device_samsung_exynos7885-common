@@ -1,4 +1,4 @@
-# All blobs below are extracted from samsung/a20ektt/a20e:11/RP1A.200720.012/A202KKKU8CUL3:user/release-keys, unless otherwise stated.
+# All blobs below are extracted from samsung/a30cis/a30:11/RP1A.200720.012/A305FNXXS6CWA3:user/release-keys, unless otherwise stated.
 
 # Audio
 vendor/bin/main_abox
@@ -8,7 +8,6 @@ vendor/etc/SoundBoosterParam.txt
 vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/vndk/libtinyalsa.so
 vendor/lib/libSamsungPostProcessConvertor.so
-vendor/lib/lib_SamsungRec_07010.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaudio_soundtrigger.so
@@ -171,9 +170,17 @@ vendor/lib64/libsecnativefeature.so
 vendor/lib64/libvkmanager_vendor.so
 vendor/lib64/libengmode_client.so
 
+# Sensors
+vendor/lib/libsensorlistener.so
+vendor/lib64/libsensorlistener.so
+
+# Sensors - Common for yas 
+vendor/etc/yas_set.cfg
+vendor/lib64/libyasalgo.so
+
 # WiFi
 vendor/etc/init/wifi_slsi.rc
-vendor/etc/init/wifi_sec.rc
+vendor/etc/init/wifi.rc:vendor/etc/init/wifi_sec.rc
 
 # TEE firmware
 vendor/tee/driver/00000000-0000-0000-0000-00535453540b
@@ -191,7 +198,6 @@ vendor/tee/00000000-0000-0000-0000-00535453540c
 vendor/tee/00000000-0000-0000-0000-0053545354ab
 vendor/tee/00000000-0000-0000-0000-00575644524d
 vendor/tee/00000000-0000-0000-0000-446e6c6f6164
-vendor/tee/00000000-0000-0000-0000-46494e474552
 vendor/tee/00000000-0000-0000-0000-474154454b45
 vendor/tee/00000000-0000-0000-0000-4b45594d5354
 vendor/tee/00000000-0000-0000-0000-505256544545
