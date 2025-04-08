@@ -97,7 +97,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.exynos7885.rc \
     init.exynos7885.usb.rc \
-    fstab.$(TARGET_SOC)
+    fstab.$(TARGET_SOC) \
+    fstab.enableswap
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.rc \

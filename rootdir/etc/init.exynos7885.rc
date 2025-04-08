@@ -11,6 +11,10 @@ on init
     # Fastcharge
     chown system radio /sys/class/sec/switch/afc_disable
 
+    # ZRAM parameters
+    write /proc/sys/vm/page-cluster 0
+    write /proc/sys/vm/swappiness 100
+
     ## SCSC WLAN
     # SD-755: Increase default socket rx buffer limit
     write /proc/sys/net/core/rmem_default 327680
@@ -562,6 +566,9 @@ on fs
 # Permissions for S.LSI ESE
         chmod 0660 /dev/p3
         chown system system /dev/p3
+
+on property:sys.boot_completed=1
+    swapon_all /vendor/etc/fstab.enableswap
 
 # Permission for flashlight control for HAL3.3
 # The Istor espresso board does not have the flash led h/w, So the below permission line are blocked.
