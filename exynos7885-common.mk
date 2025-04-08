@@ -4,6 +4,21 @@ $(call inherit-product, vendor/samsung/exynos7885-common/exynos7885-common-vendo
 # Include debug tools
 $(call inherit-product, hardware/samsung-ext/interfaces/debug-tools/debug.mk)
 
+## FEATURES LIST
+# fp: Fingerprint feature
+# lt: Light sensor feature
+# aod: The device has AMOLED screen, AOD feature
+# typec: Type-C port feature
+DEVICE_FEATURE_LIST_a10 := 
+DEVICE_FEATURE_LIST_a20 := fp aod typec
+DEVICE_FEATURE_LIST_a20e := fp typec
+DEVICE_FEATURE_LIST_a30 := fp lt aod typec
+DEVICE_FEATURE_LIST_a30s := fp lt aod typec
+DEVICE_FEATURE_LIST_a40 := fp lt aod typec
+define has_feature
+$(if $(filter $(1),$(DEVICE_FEATURE_LIST_$(TARGET_DEVICE))),true,false)
+endef
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
@@ -45,8 +60,11 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor
 
 # Fingerprint
+ifeq ($(call has_feature, fp),true)
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.samsung
+    android.hardware.biometrics.fingerprint@2.1-service.samsung \
+    FeatureFingerprintOverlay
+endif
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -91,6 +109,16 @@ PRODUCT_PACKAGES += \
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.samsung
+
+ifeq ($(call has_feature,lt),true)
+PRODUCT_PACKAGES += \
+    FeatureLightSensorOverlay
+endif
+
+ifeq ($(call has_feature,aod),true)
+PRODUCT_PACKAGES += \
+    FeatureAODOverlay
+endif
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -145,6 +173,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+ifeq ($(call has_feature,fp),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
+endif
+
+ifeq ($(call has_feature,lt),true)
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml
+endif
+
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-vendorcompat \
@@ -182,6 +220,13 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
+
+# USB
+ifeq ($(call has_feature,typec),true)
+PRODUCT_PACKAGES += android.hardware.usb@1.1-service.typec
+else
+PRODUCT_PACKAGES += android.hardware.usb@1.0-service.basic
+endif
 
 # Vibrator
 PRODUCT_PACKAGES += \
