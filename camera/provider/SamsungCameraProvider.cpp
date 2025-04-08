@@ -17,45 +17,41 @@
 #define LOG_TAG "SamsungCameraProvider@2.5"
 
 #include "SamsungCameraProvider.h"
-#include "samsung_camera.h"
 
 #include <algorithm>
 
 using ::android::NO_ERROR;
 using ::android::OK;
 
-const int kMaxCameraIdLen = 16;
+const int kAdditionalCameraId = 50;
 
-SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
-    if (!mInitFailed) {
-        for (int i : mExtraIDs) {
-            struct camera_info info;
-            auto rc = mModule->getCameraInfo(i, &info);
+SamsungCameraProvider::SamsungCameraProvider()
+    : LegacyCameraProviderImpl_2_5() {
+  if (!mInitFailed) {
+    struct camera_info info;
+    auto rc = mModule->getCameraInfo(kAdditionalCameraId, &info);
 
-            if (rc != NO_ERROR) {
-                continue;
-            }
+    if (rc != NO_ERROR) {
+      return;
+    }
 
-            if (checkCameraVersion(i, info) != OK) {
-                ALOGE("Camera version check failed!");
-                mModule.clear();
-                mInitFailed = true;
-                return;
-            }
+    if (checkCameraVersion(kAdditionalCameraId, info) != OK) {
+      ALOGE("Camera version check failed!");
+      mModule.clear();
+      mInitFailed = true;
+      return;
+    }
 
 #ifdef SAMSUNG_CAMERA_DEBUG
-            ALOGI("ID=%d is at index %d", i, mNumberOfLegacyCameras);
+    ALOGI("ID=%d is at index %d", kAdditionalCameraId, mNumberOfLegacyCameras);
 #endif
 
-            char cameraId[kMaxCameraIdLen];
-            snprintf(cameraId, sizeof(cameraId), "%d", i);
-            std::string cameraIdStr(cameraId);
-            mCameraStatusMap[cameraIdStr] = CAMERA_DEVICE_STATUS_PRESENT;
+    mCameraStatusMap[std::to_string(kAdditionalCameraId)] =
+        CAMERA_DEVICE_STATUS_PRESENT;
 
-            addDeviceNames(i);
-            mNumberOfLegacyCameras++;
-        }
-    }
+    addDeviceNames(kAdditionalCameraId);
+    mNumberOfLegacyCameras++;
+  }
 }
 
-SamsungCameraProvider::~SamsungCameraProvider() {}
+SamsungCameraProvider::~SamsungCameraProvider() = default;
