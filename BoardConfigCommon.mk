@@ -55,6 +55,10 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab
 
+# Rootdir
+BOARD_ROOT_EXTRA_FOLDERS := factory
+BOARD_ROOT_EXTRA_SYMLINKS := /factory:/efs
+
 # Sepolicy
 BOARD_SEPOLICY_TEE_FLAVOR := teegris
 include device/lineage/sepolicy/exynos/sepolicy.mk
