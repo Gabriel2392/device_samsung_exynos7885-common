@@ -38,6 +38,11 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 TARGET_KERNEL_SOURCE := kernel/samsung/exynos7885
 TARGET_KERNEL_CLANG_COMPILE := true
 
+# DTB/DTBO
+BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_DTB_CFG := $(COMMON_PATH)/configs/kernel/exynos7885.cfg
+BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
+
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
 
@@ -61,6 +66,8 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/recovery.fstab
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+BOARD_INCLUDE_RECOVERY_DTBO := true
 
 # Rootdir
 BOARD_ROOT_EXTRA_FOLDERS := factory
