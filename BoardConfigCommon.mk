@@ -3,7 +3,7 @@ COMMON_PATH := device/samsung/exynos7885-common
 BOARD_VENDOR := samsung
 
 # Platform
-TARGET_BOARD_PLATFORM := $(subst exynos,universal,$(TARGET_SOC))
+TARGET_BOARD_PLATFORM := exynos7885
 TARGET_BOOTLOADER_BOARD_NAME := $(TARGET_SOC)
 
 # Architecture
