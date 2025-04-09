@@ -9,6 +9,7 @@ vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/vndk/libtinyalsa.so
 vendor/lib/libSamsungPostProcessConvertor.so
 vendor/lib/lib_SoundAlive_SRC384_ver320.so
+vendor/lib/lib_SamsungRec_07001.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libprofileparamstorage.so
