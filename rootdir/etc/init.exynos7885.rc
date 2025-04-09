@@ -585,27 +585,6 @@ service watchdogd /system/bin/watchdogd 10 20
     class core
     seclabel u:r:watchdogd:s0
 
-# TEEGRIS daemon
-service tz_service /vendor/bin/tzdaemon
-    class core
-    user system
-    group system readproc
-    disabled
-
-# Handle core_dump/profiling requests from SWd.
-# used only for DEBUG builds.
-service tz_msg_recv /vendor/bin/tz_message_receiver
-    class core
-    user system
-    group system
-    disabled
-
-service tzts_service /vendor/bin/tzts_daemon
-    class core
-    user system
-    group system
-    disabled
-
 service charger /system/bin/charger
     class charger
     user system
