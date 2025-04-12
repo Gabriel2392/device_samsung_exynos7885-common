@@ -35,11 +35,9 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@7.0-impl \
-    libtinycompress \
     audio.r_submix.default \
     audio.usb.default \
-    SamsungDAP \
-    libprocessgroup.vendor
+    SamsungDAP
 
 # Audio Configs
 PRODUCT_COPY_FILES += \
@@ -64,10 +62,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    libGrallocWrapper \
-    libacryl \
-    libexpat.vendor
+    android.hardware.camera.provider-service.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -81,8 +76,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm-service.clearkey
 
 # Fastcharge
 PRODUCT_PACKAGES += \
@@ -104,29 +98,18 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GPS
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1.vendor \
-    android.frameworks.sensorservice@1.0.vendor
-
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.composer.hwc3-service.slsi \
-    gralloc.exynos7885 \
-    libion_exynos
+    gralloc.exynos7885
 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
-
-# HIDL
-PRODUCT_PACKAGES += \
-    libhidltransport.vendor \
-    libhwbinder.vendor
 
 # Init
 PRODUCT_PACKAGES += \
@@ -141,9 +124,7 @@ PRODUCT_COPY_FILES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.0-service.samsung \
-    libcrypto-v33 \
-    libkeymaster4_1support.vendor
+    android.hardware.keymaster@4.0-service.samsung
 
 ifeq ($(call has_feature,lt),true)
 PRODUCT_PACKAGES += \
@@ -265,12 +246,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    vendor.samsung.hardware.radio@2.1.vendor \
-    libnetutils.vendor \
-    libsqlite.vendor \
     secril_config_svc
 
 # Samsung Ext
@@ -285,8 +260,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service.exynos7885 \
-    android.hardware.sensors@1.0-impl.samsung \
-    libshim_sensorndkbridge
+    android.hardware.sensors@1.0-impl.samsung
 
 # Skip Mount
 PRODUCT_PACKAGES += \
