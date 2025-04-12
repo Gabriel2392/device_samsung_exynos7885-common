@@ -227,7 +227,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-service \
+    android.hardware.sensors@1.0-service.exynos7885 \
     android.hardware.sensors@1.0-impl.samsung \
     libshim_sensorndkbridge
 

@@ -1,0 +1,35 @@
+soong_config_module_type {
+    name: "exynos7885_sensors",
+    module_type: "cc_defaults",
+    config_namespace: "exynos7885Vars",
+    bool_variables: ["sensors_use_32bit"],
+    properties: ["compile_multilib"],
+}
+
+exynos7885_sensors {
+    name: "exynos7885_sensors_cc_defaults",
+    soong_config_variables: {
+        sensors_use_32bit: {
+            compile_multilib: "32",
+        }
+    }
+}
+
+cc_binary {
+    name: "android.hardware.sensors@1.0-service.exynos7885",
+    relative_install_path: "hw",
+    vendor: true,
+    init_rc: ["android.hardware.sensors@1.0-service.exynos7885.rc"],
+    srcs: ["service.cpp"],
+    defaults: ["exynos7885_sensors_cc_defaults"],
+
+    shared_libs: [
+        "liblog",
+        "libcutils",
+        "libdl",
+        "libbase",
+        "libutils",
+        "libhidlbase",
+        "android.hardware.sensors@1.0",
+    ],
+}
