@@ -2,23 +2,23 @@
 
 # Audio
 vendor/bin/main_abox
+vendor/etc/SoundBoosterParam.txt
 vendor/etc/abox_debug.xml
 vendor/etc/audio_board_info.xml
-vendor/etc/SoundBoosterParam.txt
 vendor/lib/soundfx/libaudioeffectoffload.so
 vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.exynos7885.so;MODULE=libaudioroute.exynos7885
 vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.exynos7885.so;MODULE=libtinyalsa.exynos7885
 vendor/lib/libSamsungPostProcessConvertor.so
-vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_SamsungRec_07001.so
+vendor/lib/lib_SoundAlive_SRC384_ver320.so
 vendor/lib/lib_soundaliveresampler.so
 vendor/lib/libaudio_soundtrigger.so
 vendor/lib/libprofileparamstorage.so
+vendor/lib/librecordalive.so
 vendor/lib/libsamsungDiamondVoice.so
 vendor/lib/libsecaudiocoreutils.so
 vendor/lib/libsecaudioinfo.so
 vendor/lib/libspeakercalibration.so
-vendor/lib/librecordalive.so
 
 # TEE
 vendor/bin/tzdaemon
@@ -36,8 +36,8 @@ vendor/bin/cbd
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/init/init.vendor.rilcommon.rc
-vendor/lib/libaudio-ril.so
 vendor/lib/libril.so:vendor/lib/libril-samsung.so
+vendor/lib/libaudio-ril.so
 vendor/lib/libsecril-client.so
 vendor/lib/libsemnativecarrierfeature.so
 vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
@@ -93,22 +93,22 @@ vendor/etc/media_profiles_V1_0.xml
 # SEC
 vendor/lib/libfloatingfeature.so
 vendor/lib/libsecnativefeature.so
+vendor/lib64/libengmode_client.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libsecnativefeature.so
 vendor/lib64/libvkmanager_vendor.so
-vendor/lib64/libengmode_client.so
 
 # Sensors
 vendor/lib/libsensorlistener.so
 vendor/lib64/libsensorlistener.so
 
-# Sensors - Common for yas 
+# Sensors - Common for yas
 vendor/etc/yas_set.cfg
 vendor/lib64/libyasalgo.so
 
 # WiFi
-vendor/etc/init/wifi_slsi.rc
 vendor/etc/init/wifi.rc:vendor/etc/init/wifi_sec.rc
+vendor/etc/init/wifi_slsi.rc
 
 # TEE firmware
 vendor/tee/driver/00000000-0000-0000-0000-00535453540b
