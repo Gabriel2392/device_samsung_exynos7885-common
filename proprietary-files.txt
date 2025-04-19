@@ -24,10 +24,10 @@ vendor/bin/tzdaemon
 vendor/bin/tzts_daemon
 vendor/etc/init/teegris_v3.rc
 vendor/lib/libteecl.so
-vendor/lib/libuuid.so
+vendor/lib/libuuid.so;MODULE_SUFFIX=_vendor
 vendor/lib64/libiwt.so
 vendor/lib64/libteecl.so
-vendor/lib64/libuuid.so
+vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
 # RIL
 vendor/bin/hw/rild
