@@ -1,7 +1,6 @@
 # All blobs below are extracted from samsung/a30cis/a30:11/RP1A.200720.012/A305FNXXS6CWA3:user/release-keys, unless otherwise stated.
 
 # Audio
-vendor/bin/main_abox
 vendor/etc/SoundBoosterParam.txt
 vendor/etc/abox_debug.xml
 vendor/etc/audio_board_info.xml
