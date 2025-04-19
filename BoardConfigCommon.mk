@@ -8,7 +8,8 @@ TARGET_BOOTLOADER_BOARD_NAME := $(TARGET_SOC)
 
 # SLSI Linaro
 include hardware/samsung_slsi-linaro/config/BoardConfig7885.mk
-BOARD_HWJPEG_ANDROID_VERSION := 11
+
+$(call soong_config_set,libhwjpeg,BOARD_HWJPEG_ANDROID_VERSION,11)
 
 # Architecture
 TARGET_ARCH := arm64
@@ -29,9 +30,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
 # Camera
 ifneq ($(TARGET_DEVICE),a10)
-SOONG_CONFIG_NAMESPACES += samsungCameraVars
-SOONG_CONFIG_samsungCameraVars += extra_ids
-SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+$(call soong_config_set,samsungCameraVars,extra_ids,50)
 endif
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
