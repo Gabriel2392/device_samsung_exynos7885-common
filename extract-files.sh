@@ -63,7 +63,7 @@ function blob_fixup() {
         vendor/lib*/libsensorlistener.so)
             "${PATCHELF}" --add-needed "libshim_sensorndkbridge.so" "${2}"
             ;;
-	vendor/lib/libaudio_soundtrigger.so | vendor/lib/soundfx/libaudioeffectoffload.so)
+	vendor/lib/libaudio_soundtrigger.so | vendor/lib/soundfx/libaudioeffectoffload.so | vendor/lib/libaudioroute.exynos7885.so)
 	    "$PATCHELF" --replace-needed libtinyalsa.so libtinyalsa.exynos7885.so "$2"
 	    ;;
 	vendor/lib/hw/audio.primary.exynos7884B.so | vendor/lib/hw/audio.primary.exynos7904.so)
@@ -76,10 +76,10 @@ function blob_fixup() {
 	    xxd -p -c0 "${2}" | sed "s/600e40f9820c805224008052e10315aae30314aa/600e40f9820c805224008052e10315aa030080d2/g" | xxd -r -p > "${2}".patched
 	    mv "${2}".patched "${2}"
 	    ;;
-	vendor/lib*/libskeymaster4device.so)
+	vendor/lib*/libskeymaster4device.so | vendor/lib*/libkeymaster_helper.so)
             "${PATCHELF}" --replace-needed libcrypto.so libcrypto-v33.so "${2}"
             ;;
-	vendor/lib/libwvhidl.so)
+	vendor/lib/libwvhidl.so | vendor/lib/mediadrm/libwvdrmengine.so)
 	    "$PATCHELF" --add-needed libcrypto_shim.so "$2"
 	    ;;
     esac
