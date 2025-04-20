@@ -95,8 +95,8 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.exynos7885.rc \
-    init.exynos7885.usb.rc \
+    init.$(TARGET_SOC).rc \
+    init.$(TARGET_SOC).usb.rc \
     fstab.$(TARGET_SOC) \
     fstab.enableswap
 

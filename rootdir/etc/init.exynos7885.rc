@@ -1,3 +1,5 @@
+import /vendor/etc/init/hw/init.${ro.hardware}.usb.rc
+
 on early-init
     mkdir /efs 0771 radio system
     mkdir /mnt/vendor/efs 0771 radio system
