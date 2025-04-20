@@ -148,30 +148,14 @@
 /dev/ttyGS1               0660   system     system
 
 # Modem Interface
-/dev/block/platform/13500000.dwmmc0/by-name/RADIO	0660   system     radio
 /dev/block/platform/13500000.dwmmc0/by-name/radio	0660   system     radio
-/dev/block/platform/13500000.dwmmc0/by-name/CP_DEBUG   0660	radio	system
 /dev/block/platform/13500000.dwmmc0/by-name/cp_debug   0660	radio	system
 /sys/devices/platform/10000.mif_pdata	sim/ds_detect	0660	radio	system
 /dev/umts*            0660   system      radio
 /dev/umts_csd         0660   system      loop_radio
 /dev/smd4               0660   system     radio
-/dev/ramdump_memshare               0660   system     radio
-/dev/umts_ciq*            0660   system     bridge_rw
-
-# interactive governor parameters
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_rate			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/timer_slack			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/min_sample_time		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/hispeed_freq		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/target_loads		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/go_hispeed_load		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/above_hispeed_delay		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boost			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse			0200	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/input_boost			0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/boostpulse_duration		0660	system	system
-/sys/devices/system/cpu/cpu*	cpufreq/interactive/io_is_busy			0660	system	system
+/dev/ramdump_memshare   0660   system     radio
+/dev/umts_ciq*          0660   system     system
 
 # Vision (VPU, SCORE)
 /dev/vertex0             0660   media      media
@@ -193,12 +177,6 @@
 /dev/scsc_log_collector_0 0660   wifi     wifi
 
 # Google FRP solution
-/dev/block/platform/13500000.dwmmc0/by-name/PERSISTENT    0660    system    system
-
-# Reactivation Lock solution
-/dev/block/platform/13500000.dwmmc0/by-name/STEADY    0660    system    system
-
-# Google FRP solution
 /dev/block/platform/13500000.dwmmc0/by-name/persistent    0660    system    system
 
 # Reactivation Lock solution
@@ -213,7 +191,7 @@
 /dev/iio:device*          0660   system		system
 /sys/devices/platform/13980000.spi/spi_master/spi4/spi4.0/iio:device*    buffer/enable       0660    system    system
 /sys/devices/platform/13980000.spi/spi_master/spi4/spi4.0/iio:device*    buffer/length       0660    system    system
-/sys/bus/iio/devices/iio:device*    0664   system     radio
+/sys/bus/iio/devices/iio:device* *  0664   system     radio
 
 # TEEGRIS
 /dev/tzdev		0666	system		system
