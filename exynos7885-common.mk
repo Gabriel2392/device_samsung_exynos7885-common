@@ -59,6 +59,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey \
     android.hardware.drm@1.3.vendor
 
+# Fastcharge
+PRODUCT_PACKAGES += \
+    vendor.lineage.fastcharge@1.0-service.samsung
+
 # Fingerprint
 ifeq ($(call has_feature, fp),true)
 PRODUCT_PACKAGES += \
@@ -247,6 +251,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung \
+    vendor.lineage.touch@1.0-service.ss
 
 # USB
 ifeq ($(call has_feature,typec),true)
