@@ -1,4 +1,4 @@
-allow hal_wifi_default conn_vendor_data_file:dir rw_dir_perms;
+allow hal_wifi_default conn_vendor_data_file:dir create_dir_perms;
 allow hal_wifi_default conn_vendor_data_file:file create_file_perms;
 allow hal_wifi_default wifi_vendor_data_file:dir search;
 

@@ -1,0 +1,1 @@
+allow secril_config_svc efs_file:lnk_file read;
