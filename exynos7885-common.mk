@@ -19,6 +19,9 @@ define has_feature
 $(if $(filter $(1),$(DEVICE_FEATURE_LIST_$(TARGET_DEVICE))),true,false)
 endef
 
+# GMS Client Id
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
