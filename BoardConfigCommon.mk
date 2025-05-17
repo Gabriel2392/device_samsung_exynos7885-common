@@ -40,7 +40,7 @@ BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 endif
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_exynos7885
+$(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_exynos7885)
 
 # Kernel
 BOARD_KERNEL_IMAGE_NAME := Image
