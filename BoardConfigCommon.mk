@@ -31,8 +31,10 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 # Camera
 ifneq ($(TARGET_DEVICE),a10)
 $(call soong_config_set,samsungCameraVars,extra_ids,50)
-endif
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
+else
+$(call soong_config_set,samsungCameraVars,camera_32bit,true)
+endif
 
 # Display
 ifeq ($(call has_feature,aod),false)
