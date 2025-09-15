@@ -103,8 +103,12 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    android.hardware.composer.hwc3-service.slsi \
-    gralloc.exynos7885
+    android.hardware.composer.hwc3-service.slsi-v35 \
+    libexynosdisplay-v35 \
+    libexynosgraphicbuffer-v35 \
+    libacryl-v35 \
+    libion_exynos-v35 \
+    gralloc.exynos7884B
 
 # Health
 PRODUCT_PACKAGES += \

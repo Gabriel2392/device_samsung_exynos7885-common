@@ -29,6 +29,22 @@ vendor/lib64/libiwt.so
 vendor/lib64/libteecl.so
 vendor/lib64/libuuid.so;MODULE_SUFFIX=_vendor
 
+# Display
+vendor/bin/hw/android.hardware.composer.hwc3-service.slsi-v35
+vendor/lib64/libexynosdisplay-v35.so
+vendor/lib64/libexynosgraphicbuffer-v35.so
+vendor/lib64/libacryl-v35.so
+vendor/lib/libacryl-v35.so
+vendor/lib64/libgiantmscl-v35.so
+vendor/lib/libgiantmscl-v35.so
+vendor/lib64/libhwjpeg-v35.so
+vendor/lib/libhwjpeg-v35.so
+vendor/lib64/libdrmresource-v35.so
+vendor/lib64/libion_exynos-v35.so
+vendor/lib/libion_exynos-v35.so
+vendor/lib/hw/gralloc.exynos7884B.so
+vendor/lib64/hw/gralloc.exynos7884B.so
+
 # RIL
 vendor/bin/hw/rild
 vendor/bin/cbd

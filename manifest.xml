@@ -48,6 +48,14 @@
       <transport>hwbinder</transport>
       <fqname>@2.4::IComposer/default</fqname>
    </hal>
+   <hal format="aidl">
+       <name>android.hardware.graphics.composer3</name>
+       <version>3</version>
+       <interface>
+           <name>IComposer</name>
+           <instance>default</instance>
+       </interface>
+   </hal>
    <hal format="hidl">
       <name>android.hardware.graphics.mapper</name>
       <transport arch="32+64">passthrough</transport>
